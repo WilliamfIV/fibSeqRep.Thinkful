@@ -12,6 +12,7 @@
 		7735D6D31EE2F97000E52CD1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7735D6D11EE2F97000E52CD1 /* Main.storyboard */; };
 		7735D6D51EE2F97000E52CD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7735D6D41EE2F97000E52CD1 /* Assets.xcassets */; };
 		7735D6D81EE2F97000E52CD1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7735D6D61EE2F97000E52CD1 /* LaunchScreen.storyboard */; };
+		7735D6E01EE31DE500E52CD1 /* FibSeqFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7735D6DF1EE31DE500E52CD1 /* FibSeqFile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		7735D6D41EE2F97000E52CD1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7735D6D71EE2F97000E52CD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7735D6D91EE2F97000E52CD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7735D6DF1EE31DE500E52CD1 /* FibSeqFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FibSeqFile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,39 @@
 		7735D6CC1EE2F97000E52CD1 /* fibonacciSequence.Thinkful */ = {
 			isa = PBXGroup;
 			children = (
+				77799E6D1EE4AEFD009F02B3 /* model */,
+				77799E6C1EE4AEF4009F02B3 /* view */,
+				77799E6B1EE4AEE5009F02B3 /* controller */,
 				7735D6CD1EE2F97000E52CD1 /* AppDelegate.swift */,
-				7735D6CF1EE2F97000E52CD1 /* ViewController.swift */,
-				7735D6D11EE2F97000E52CD1 /* Main.storyboard */,
 				7735D6D41EE2F97000E52CD1 /* Assets.xcassets */,
 				7735D6D61EE2F97000E52CD1 /* LaunchScreen.storyboard */,
 				7735D6D91EE2F97000E52CD1 /* Info.plist */,
 			);
 			path = fibonacciSequence.Thinkful;
+			sourceTree = "<group>";
+		};
+		77799E6B1EE4AEE5009F02B3 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				7735D6CF1EE2F97000E52CD1 /* ViewController.swift */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+		77799E6C1EE4AEF4009F02B3 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				7735D6D11EE2F97000E52CD1 /* Main.storyboard */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		77799E6D1EE4AEFD009F02B3 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				7735D6DF1EE31DE500E52CD1 /* FibSeqFile.swift */,
+			);
+			name = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +164,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7735D6E01EE31DE500E52CD1 /* FibSeqFile.swift in Sources */,
 				7735D6D01EE2F97000E52CD1 /* ViewController.swift in Sources */,
 				7735D6CE1EE2F97000E52CD1 /* AppDelegate.swift in Sources */,
 			);
@@ -304,6 +332,7 @@
 				7735D6DE1EE2F97000E52CD1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
