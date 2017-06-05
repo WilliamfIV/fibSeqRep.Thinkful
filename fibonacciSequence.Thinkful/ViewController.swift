@@ -10,16 +10,32 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var numberOfItemsSlider: UISlider!
+    @IBOutlet weak var numberOfItemsLabel: UILabel!
+    @IBOutlet weak var includeZeroLabel: UILabel!
+    @IBOutlet weak var includeZero: UISwitch!
+    @IBOutlet weak var textView: UITextView!
+   
+    var fibonacciSequence = FibonacciSequence(numberOfItemsInSequence: 2, includesZero: true)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
     }
-
-
+    
+    @IBAction func updateFibonacciSequence() {
+        fibonacciSequence = FibonacciSequence(numberOfItemsInSequence: UInt(numberOfItemsSlider.value), includesZero: includeZero.isOn)
+        textView.text = fibonacciSequence.values.description
+        
+    }
 }
+
+
+        
+
 
