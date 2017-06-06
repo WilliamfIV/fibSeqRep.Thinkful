@@ -42,7 +42,7 @@ class ViewController: UIViewController {
         }
         numberOfItemsLabel.text = String(Int(numberOfItemsSlider.value))
         
-        fibonacciSequence = FibonacciSequence(numberOfItemsInSequence: UInt(UInt64(numberOfItemsSlider.value)), includesZero:includeZero.isOn)
+        fibonacciSequence = FibonacciSequence(numberOfItemsInSequence: UInt64(numberOfItemsSlider.value), includesZero:includeZero.isOn)
 
         textView.text = fibonacciSequence.values.description
 
@@ -50,10 +50,10 @@ class ViewController: UIViewController {
 
 }
 
-
+//
         
 
 
-//Update numberOfItemsLabel.... 
 
-//look at properties for each IBOutlet
+
+
