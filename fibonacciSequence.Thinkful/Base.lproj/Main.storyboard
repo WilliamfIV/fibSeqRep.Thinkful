@@ -22,26 +22,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yvc-8e-z5m">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yvc-8e-z5m">
                                 <rect key="frame" x="58" y="41" width="259" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="259" id="JJM-7X-BC7"/>
                                     <constraint firstAttribute="height" constant="21" id="Wu1-lh-2to"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="22"/>
-                                <color key="textColor" red="0.24705882352941178" green="0.74509803921568629" blue="0.23921568627450979" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="2">
+                                        <attributes>
+                                            <color key="NSColor" red="0.24705882352941178" green="0.74509803921568629" blue="0.23921568627450979" alpha="0.76134417808219179" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="21" name="Cochin"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="LV3-rR-kGZ">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" pagingEnabled="YES" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="LV3-rR-kGZ">
                                 <rect key="frame" x="67" y="83" width="240" height="370"/>
-                                <color key="backgroundColor" red="0.92156862745098034" green="1" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.98640666210000005" green="0.9961730647" blue="0.9961730647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="8HI-Z2-Shk"/>
                                     <constraint firstAttribute="height" constant="370" id="jxB-b2-e0N"/>
                                 </constraints>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" red="0.24602597800000001" green="1" blue="0.23781366609999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" calendarEvent="YES"/>
                             </textView>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pDl-8a-Rc0">
                                 <rect key="frame" x="186" y="468" width="51" height="31"/>
@@ -51,6 +59,9 @@
                                     <constraint firstAttribute="height" constant="31" id="gGm-aP-oU2"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="31" id="zFu-gC-Cbg"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="updateFibonacciSequence" destination="BYZ-38-t0r" eventType="valueChanged" id="ia2-Qa-h3Q"/>
+                                </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Include 0?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5dO-DG-2XB">
                                 <rect key="frame" x="92" y="461" width="86" height="45"/>
@@ -59,7 +70,7 @@
                                     <constraint firstAttribute="width" constant="86" id="DBz-ha-38o"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <color key="textColor" red="0.24705882352941178" green="0.74509803921568629" blue="0.23921568627450979" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.24705882352941178" green="0.74509803921568629" blue="0.23921568627450979" alpha="0.76000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="2" maxValue="94" translatesAutoresizingMaskIntoConstraints="NO" id="9lY-rv-4YM">
@@ -68,6 +79,9 @@
                                     <constraint firstAttribute="width" constant="248" id="IsO-fK-2Ks"/>
                                     <constraint firstAttribute="height" constant="30" id="ea7-na-t0M"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="updateFibonacciSequence" destination="BYZ-38-t0r" eventType="valueChanged" id="P51-bd-XMX"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number Of Items In Sequence:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h4I-6A-SFj">
                                 <rect key="frame" x="73" y="514" width="229" height="21"/>
@@ -76,6 +90,17 @@
                                     <constraint firstAttribute="height" constant="21" id="h3i-Rm-ZDg"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="textColor" red="0.24705882352941178" green="0.74509803921568629" blue="0.23921568627450979" alpha="0.76000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fibonacci Sequence" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BmX-02-iMb">
+                                <rect key="frame" x="80" y="607" width="231" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="231" id="9la-Mh-7NE"/>
+                                    <constraint firstAttribute="height" constant="26" id="XHq-1b-7Mb"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="26" id="lr8-OG-2tk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SnellRoundhand-Bold" family="Snell Roundhand" pointSize="25"/>
                                 <color key="textColor" red="0.24705882352941178" green="0.74509803921568629" blue="0.23921568627450979" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -89,19 +114,8 @@
                                 <color key="textColor" red="0.24705882352941178" green="0.72328016493055558" blue="0.23781366609999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fibonacci Sequence" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BmX-02-iMb">
-                                <rect key="frame" x="80" y="607" width="231" height="26"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="231" id="9la-Mh-7NE"/>
-                                    <constraint firstAttribute="height" constant="26" id="XHq-1b-7Mb"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="26" id="lr8-OG-2tk"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
-                                <color key="textColor" red="0.24705882352941178" green="0.74509803921568629" blue="0.23921568627450979" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.92156862745098034" green="1" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.98640666210000005" green="0.9961730647" blue="0.9961730647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" red="0.21552684277633963" green="0.9961730647" blue="0.27199471338806419" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="D8o-T8-USb" firstAttribute="leading" secondItem="pDl-8a-Rc0" secondAttribute="trailing" constant="8" id="21r-kq-OY1"/>
@@ -112,10 +126,10 @@
                             <constraint firstItem="5dO-DG-2XB" firstAttribute="top" secondItem="LV3-rR-kGZ" secondAttribute="bottom" constant="8" id="Ags-hD-0J6"/>
                             <constraint firstItem="9lY-rv-4YM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="47" id="FjJ-9t-HxK"/>
                             <constraint firstItem="LV3-rR-kGZ" firstAttribute="top" secondItem="Yvc-8e-z5m" secondAttribute="bottom" constant="21" id="We0-BD-u6u"/>
-                            <constraint firstItem="Yvc-8e-z5m" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="21" id="XvJ-Bd-DhM"/>
                             <constraint firstItem="BmX-02-iMb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="64" id="abW-Uu-YPc"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Yvc-8e-z5m" secondAttribute="trailing" constant="42" id="e9W-ts-SIO"/>
                             <constraint firstAttribute="trailingMargin" secondItem="9lY-rv-4YM" secondAttribute="trailing" constant="48" id="fYS-JI-cfg"/>
+                            <constraint firstItem="Yvc-8e-z5m" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="21" id="hDA-dA-Mbq"/>
                             <constraint firstItem="LV3-rR-kGZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="51" id="hf2-wd-k1d"/>
                             <constraint firstItem="Yvc-8e-z5m" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="42" id="ifQ-dN-U9s"/>
                             <constraint firstItem="D8o-T8-USb" firstAttribute="leading" secondItem="pDl-8a-Rc0" secondAttribute="trailing" constant="8" id="lio-1x-SXq"/>
@@ -140,7 +154,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="106" y="-190"/>
+            <point key="canvasLocation" x="257" y="-182"/>
         </scene>
     </scenes>
 </document>
